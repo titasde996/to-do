@@ -1,0 +1,8 @@
+<h1>To-Do-List</h1>
+Write your events here<input type="text" #task/>
+<br>
+<br>
+<button type="submit"  (click)="add(task.value)">Create new event</button>
+<ul *ngFor="let  item of list">
+  <li>{{item.name}} <button (click)="remove(item.id)">Remove event</button></li>
+</ul>
